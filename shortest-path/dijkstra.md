@@ -18,3 +18,20 @@
    * ```heapq.heappush(q, (cost, i[0]))```
    * ```dist, now = heapq.heappop(q)```
    * O(ElogV)
+```python
+# ver.2
+def dijkstra(start):
+    q = []
+    heapq.heappush(q, (0, start))
+    distance[start] = 0
+    while q:
+        dist, now = heapq.heappop(q)
+        if distance[now] < dist:  # 이미 처리된 적이 있는 노드 무시
+            continue
+        # 현재 노드의 인접 노드 확인
+        for i in graph[now]:
+            cost = dist + i[1]
+            if cost < distance[i[0]]:
+                distance[i[0]] = cost
+                heapq.heappush(q, (cost, i[0]))
+```
