@@ -1,4 +1,5 @@
 # 괄호 변환
+# 재귀함수
 
 def solution(s):
     left = 0
@@ -14,11 +15,9 @@ def solution(s):
             u = s[:left+right]
             v = s[left+right:]
             if check(u):  # u = 올바른 괄호 문자열
-                print(1)
                 v = solution(v)
                 return u + v
             else:
-                print(2)
                 v = solution(v)
                 v = "(" + v + ")"
                 u = list(u[1:-1])
