@@ -21,7 +21,7 @@ for i in range(n-1, -1, -1):
         max_value = dp[i]
     else:
         dp[i] = max_value
-
+ 
 print(max_value)
 
 '''
