@@ -1,12 +1,12 @@
 # DP
 # 병사 배치하기
-# LSI(Longest Increasing Subsequence): 값들이 증가하는 형태의 가장 긴 부분 수열
+# LIS(Longest Increasing Subsequence): 값들이 증가하는 형태의 가장 긴 부분 수열
 # D[i] = max(D[i], D[j] + 1) if array[j] < array[i]  ->  D[i] = array[i]를 마지막 원소로 가지는 부분 수열의 최대 길이
 
 
 n = int(input())
 array = list(map(int, input().split()))
-array.reverse()  # 순서를 뒤집어 LSI 문제로 변환
+array.reverse()  # 순서를 뒤집어 LIS 문제로 변환
 dp = [1] * n
 
 for i in range(1, n):
