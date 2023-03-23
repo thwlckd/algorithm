@@ -15,7 +15,6 @@ def check(answer):
 
 def solution(n, build_frame):
     answer = []
-    data = [[] for _ in range(n)]
     for now in build_frame:
         x, y, stuff, operate = now  # x, y, 기둥0/보1, 삭제0/설치1
         if operate == 0:  # 삭제
