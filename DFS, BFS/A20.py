@@ -37,7 +37,7 @@ def watch(x, y, direction):
             if board[x][y] == 'O':
                 return False
             x -= 1
-    if direction == 0:  # 아래쪽 감시
+    if direction == 3:  # 아래쪽 감시
         while x < n:
             if board[x][y] == 'S':
                 return True
