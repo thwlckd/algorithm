@@ -21,7 +21,7 @@ def dijkstra():
     distance[start] = 0
     while q:
         dist, now = heapq.heappop(q)
-        if dist < distance[now]:  # 현재 노드를 지나는 더 짧은 경로를 알고 있음
+        if dist > distance[now]:  # 현재 노드를 지나는 더 짧은 경로를 알고 있음
             continue
         # 인접 노드 탐색
         for i in graph[now]:
